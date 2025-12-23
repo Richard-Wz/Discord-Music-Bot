@@ -24,7 +24,7 @@ Designed for **personal and educational purposes** to explore Discord bot develo
 ### 1. Clone this repository
 ```bash
 git clone https://github.com/Richard-Wz/Discord-Music-Bot.git
-cd Discord-Music-Bot
+cd discord-music-bot
 ```
 
 ### 2. Create a `.env` file with your Discord bot token
@@ -38,7 +38,19 @@ docker compose up --build
 ```
 
 ### 4. Invite your bot to a server
-Use the OAuth2 URL with `bot` and `applications.commands` scopes.
+
+1. Go to the [Discord Developer Portal](https://discord.com/developers/applications) and select your bot application
+2. Click **OAuth2 → URL Generator** in the left menu
+3. Under **Scopes**, check:
+   - `bot`
+   - `applications.commands` (needed for slash commands)
+4. After checking `bot`, a **Bot Permissions** section appears. Select the permissions your bot needs:
+   - ✅ **Connect** (required to join voice channels)
+   - ✅ **Speak** (required to play audio)
+   - ✅ **Send Messages** (for status messages)
+   - Optional: **Embed Links**, **Read Message History**, **Use Slash Commands**
+5. Copy the generated URL at the bottom of the page
+6. Open the URL in your browser, select your server, and authorize the bot
 
 ---
 
