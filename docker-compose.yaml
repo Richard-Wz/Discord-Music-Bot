@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  music-bot:
+    build: .
+    env_file:
+      - .env
+    restart: unless-stopped
