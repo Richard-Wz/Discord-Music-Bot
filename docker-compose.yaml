@@ -2,7 +2,16 @@ version: "3.8"
 
 services:
   music-bot:
+    container_name: Aria
+    image: aria_music_bot:1.1
     build: .
     env_file:
       - .env
     restart: unless-stopped
+    deploy:
+      resources:
+        limits: 
+          cpus: '0.25'  # Limit to 25% of a single CPU core
+          memory: 512M  # Limit memory usage to 512MB
+        reservations:
+          memory: 256M # Reserve 256MB of memory
